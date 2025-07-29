@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Page Acceuil</title>
+        <style>
+            body {
+                transition: 0.5s;
+                
+            }
+            .BOX {
+                align-items: center;
+                margin-top: 80px;
+                margin-left: 300px;
+                width: max-content;
+                height: 500px;
+                background-color: rgba(206, 222, 237, 0.543);
+                text-align: left;
+                border-radius: 10%;
+                font-size: 30px;
+                padding: 8px 30px;
+            }
+            video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            .pad {
+                padding: 8px 30px;
+            }
+            .col {
+                color: #023745e7;
+                text-align: center;
+            }
+            .orange_link {
+              color:#fff;
+              padding: 10px 50px;
+              background-color: #40cbf2;
+              text-transform: capitalize;
+              border-radius: 20%;
+    
+    
+}
+
+        </style>
+    <body>
+        <video autoplay muted loop>
+            <source src="video/InShot_20250118_020523299.mp4" type="video/mp4">
+        </video>
+         <div class="BOX">
+            <h2 class="col">Login</h2>
+            <label for="text">Votre pseudo :  </label>
+            <input type="text" id="nom" class="pad" size="50px"><br>
+            <p> </p>
+            <p> </p>
+            <label for="Mot de passe">Mot de passe :</label>
+            <input type="password" id="Mot de passe" class="pad" size="50px"><br>
+            <p> </p>
+            <label for="Mot de passe">Ressaisir<br> mot de passe :</label>
+            <input type="password" id="mot de passe" class="pad" size="50px"><br>
+            <p> </p>
+            
+            <h3 style="text-align: center;"><a href="index.html"><button class="orange_link">Log in</button></a></h3>
+            <a href="sign up.html"  class="col"> Sign Up</a>
+         </div>
+         
+    </body>
+</html>
