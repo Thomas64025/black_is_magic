@@ -1,6 +1,7 @@
 <!Doctype html>
 <html>
     <head>
+        
         <title>Page Acceuil</title>
         <style>
             body {
@@ -41,9 +42,45 @@
               background-color: #40cbf2;
               text-transform: capitalize;
               border-radius: 20%;
+            }
     
-    
+.animated-button {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
+
+/* effet sur hover : animation fluide */
+.animated-button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, #b6c5bb, #012e47, #011013);
+  animation: shimmer 2s linear infinite;
+  z-index: -1;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 
         </style>
     <body>
@@ -63,7 +100,7 @@
             <input type="password" id="mot de passe" class="pad" size="50px"><br>
             <p> </p>
             
-            <h3 style="text-align: center;"><a href="index.html"><button class="orange_link">Log in</button></a></h3>
+            <h3 style="text-align: center;"><a href="login.php"><a href="sign up.html"></a><a href="index.html"><button class="animated-button">Log in</button></a></h3>
             <a href="sign up.html"  class="col"> Sign Up</a>
          </div>
          

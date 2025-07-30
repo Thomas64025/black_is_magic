@@ -42,6 +42,42 @@
     border-radius: 20%;
     
 }
+.animated-button {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* effet sur hover : animation fluide */
+.animated-button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, #b6c5bb, #012e47, #011013);
+  animation: shimmer 2s linear infinite;
+  z-index: -1;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 
         </style>
     <body>
@@ -61,7 +97,7 @@
             <p> </p>
             Confirme les termes de securite <input type="checkbox" id="check" class="pad">
             <p> </p>
-            <h3 style="text-align: center;"><a href="index.html"><button class="orange_link">Sign up</button></a></h3>
+            <h3 style="text-align: center;"><a href="index.html"><button class="animated-button">Sign up</button></a></h3>
             <a href="loging.html"  class="col"> Login</a>
          </div>
     </body>
